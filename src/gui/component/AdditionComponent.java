@@ -12,7 +12,7 @@ public class AdditionComponent extends JPanel {
 
     void initializeComponent() {
         this.setBackground(Color.red);
-        this.setPreferredSize(new Dimension(this.getWidth(), 150));
+        this.setPreferredSize(new Dimension(this.getWidth(), 100));
         this.setLayout(new GridBagLayout());
     }
 
