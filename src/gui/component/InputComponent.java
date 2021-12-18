@@ -9,6 +9,7 @@ public class InputComponent extends JPanel {
     JTextField textField;
 
     public InputComponent(){
+        this.setBackground(null);
         initialize();
         addComponents();
     }
