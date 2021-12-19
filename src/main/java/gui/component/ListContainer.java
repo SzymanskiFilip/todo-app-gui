@@ -6,6 +6,7 @@ import java.awt.*;
 public class ListContainer extends JPanel {
     public ListContainer(){
        this.setLayout(new GridBagLayout());
-       this.add(new JButton("!!!!!"));
+       this.setBackground(Color.magenta);
+       this.add(new ListComponent());
     }
 }
