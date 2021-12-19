@@ -1,6 +1,7 @@
 package gui;
 
 import gui.component.AdditionComponent;
+import gui.component.CenterContainer;
 import gui.component.ListContainer;
 
 import javax.swing.*;
@@ -28,6 +29,6 @@ public class Frame extends JFrame {
     public void addComponents(){
         //add components
         this.getContentPane().add(new AdditionComponent(), BorderLayout.NORTH);
-        this.getContentPane().add(new ListContainer(), BorderLayout.CENTER);
+        this.getContentPane().add(new CenterContainer(), BorderLayout.CENTER);
     }
 }
