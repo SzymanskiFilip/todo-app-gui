@@ -2,8 +2,10 @@ package gui.component;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class AdditionComponent extends JPanel {
+public class AdditionComponent extends JPanel{
 
     public AdditionComponent() {
         initializeComponent();
@@ -19,4 +21,5 @@ public class AdditionComponent extends JPanel {
     void addComponents(){
         this.add(new InputComponent());
     }
+
 }
