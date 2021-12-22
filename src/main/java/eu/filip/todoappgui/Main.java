@@ -1,2 +1,11 @@
-package eu.filip.todoappgui;public class Main {
+package eu.filip.todoappgui;
+
+import javafx.application.Application;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+    @Override
+    public void start(Stage stage) throws Exception {
+
+    }
 }
