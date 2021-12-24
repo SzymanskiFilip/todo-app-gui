@@ -10,6 +10,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -19,12 +20,14 @@ public class Controller implements Initializable {
     @FXML
     private TextField textField;
 
-    String[] todoList = {"eat", "work out", "play cs"};
+    ArrayList<String> todoList = new ArrayList<>();
     String currentTodo;
 
     public void add(ActionEvent e){
         try{
             System.out.println(textField.getText());
+            todoList.add(textField.getText());
+            list.getItems().add(textField.getText());
         } catch (Exception ex){
             ex.printStackTrace();
         }
