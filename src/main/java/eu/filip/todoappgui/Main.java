@@ -19,7 +19,7 @@ public class Main extends Application {
 
         stage.setWidth(1280);
         stage.setHeight(720);
-        stage.setResizable(false);
+        stage.setResizable(true);
         stage.setTitle("Todo App");
         stage.setScene(scene);
 
