@@ -23,12 +23,14 @@ public class FileReader {
     public static void overrideTodos(ArrayList<String> todosToOverride){
         File file = new File("src/todos.txt");
         try{
-            FileWriter fileWriter = new FileWriter(file);
+            FileWriter fileWriter = new FileWriter(file, false);
             String toWrite = "";
             for(String todo : todosToOverride){
                 toWrite += todo + "\n";
             }
+            System.out.println(toWrite);
             fileWriter.write(toWrite);
+            fileWriter.close();
         } catch (Exception e){
             e.printStackTrace();
         }
