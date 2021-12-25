@@ -25,6 +25,15 @@
             </Button>
          </children>
       </HBox>
-      <ListView layoutX="5.0" layoutY="62.0" prefHeight="334.0" prefWidth="590.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="62.0" />
+      <AnchorPane layoutY="62.0" prefHeight="338.0" prefWidth="600.0" AnchorPane.bottomAnchor="-0.39999999999997726" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="62.0">
+         <children>
+            <ListView fx:id="list" layoutX="14.0" layoutY="5.0" prefHeight="328.0" prefWidth="426.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="5.0" />
+            <AnchorPane layoutX="452.0" layoutY="6.0" prefHeight="328.0" prefWidth="134.0" AnchorPane.bottomAnchor="4.399999999999977" AnchorPane.leftAnchor="452.0" AnchorPane.rightAnchor="13.599999999999994" AnchorPane.topAnchor="6.0">
+               <children>
+                  <Button fx:id="deleteButton" alignment="CENTER" layoutX="36.0" layoutY="152.0" mnemonicParsing="false" onAction="#delete" text="Delete" AnchorPane.rightAnchor="36.800000000000004" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
