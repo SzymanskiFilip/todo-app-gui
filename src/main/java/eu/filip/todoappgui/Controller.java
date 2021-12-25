@@ -1,15 +1,11 @@
 package eu.filip.todoappgui;
 
-import javafx.beans.InvalidationListener;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.ListChangeListener;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
@@ -25,7 +21,7 @@ public class Controller implements Initializable {
     @FXML
     private Button deleteButton;
 
-    ArrayList<String> todoList = new ArrayList<>();
+    ArrayList<String> todoList = FileReader.getTodos();
     String currentTodo;
 
     public void add(ActionEvent e){
@@ -33,6 +29,7 @@ public class Controller implements Initializable {
             todoList.add(textField.getText());
             list.getItems().add(textField.getText());
             textField.setText("");
+            FileReader.overrideTodos(todoList);
         } catch (Exception ex){
             ex.printStackTrace();
         }
@@ -40,9 +37,12 @@ public class Controller implements Initializable {
 
     public void delete(ActionEvent e){
         try{
-            System.out.println("DELETING: " + currentTodo);
-            list.getItems().remove(list.getItems().indexOf(currentTodo));
-            todoList.remove(todoList.indexOf(currentTodo));
+            int index = list.getItems().indexOf(currentTodo);
+
+            list.getItems().remove(index);
+            todoList.remove(index);
+
+            FileReader.overrideTodos(todoList);
         } catch (Exception ex){
             ex.printStackTrace();
         }
@@ -55,7 +55,6 @@ public class Controller implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
                 currentTodo = list.getSelectionModel().getSelectedItem();
-                System.out.println(currentTodo);
             }
         });
     }
